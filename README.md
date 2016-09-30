@@ -97,7 +97,7 @@ print
 
 ## Your first twitter client
 
-The following code allows you to retrieve your twitter timeline
+The following code allows you to retrieve your twitter timeline, [demo-client.py](https://github.com/josanabr/mytwitter/blob/master/demo-client.py)
 
 ~~~~
 
@@ -133,5 +133,22 @@ By your own values, respectively:
 * Consumer secret 
 * Access token
 * Access token secret
+
+## Presenting human-readable results
+
+The following code allows you to read the results of your previous program in a more readable way, [jsonhelper.py](https://github.com/josanabr/mytwitter/blob/master/jsonhelper.py).
+
+~~~~
+
+#!/usr/bin/env python
+import json
+from pprint import pprint
+
+with open('twittertimeline.txt') as data_file:    
+    data = json.load(data_file)
+
+pprint(data)
+
+~~~~
 
 [1]: https://github.com/joestump/python-oauth2/wiki/Twitter-Three-legged-OAuth  "Twitter Three legged OAuth"
