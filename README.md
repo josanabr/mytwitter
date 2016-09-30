@@ -87,4 +87,51 @@ print
 
 8. Save `oauth_token` and `oauth_token_secret` values.
 
+9. Visit the web page of your recently created twitter app, click on "Keys and Access Tokens" tab and click on button "Test OAuth".
+
+10. Jot down the the following fields
+	* Consumer key
+	* Consumer secret
+	* Access token
+	* Access token secret
+
+## Your first twitter client
+
+The following code allows you to retrieve your twitter timeline
+
+~~~~
+
+#!/usr/bin/env python
+# -*- coding: latin-1 -*-
+import oauth2
+
+def oauth_req(url, key, secret, http_method="GET", post_body="", http_headers=None):
+    consumer = oauth2.Consumer(key="CONSUMER_KEY", secret="CONSUMER_SECRET")
+    token = oauth2.Token(key=key, secret=secret)
+    client = oauth2.Client(consumer, token)
+    resp, content = client.request( url, method=http_method, body=post_body, headers=http_headers )
+    return content
+ 
+home_timeline = oauth_req( 'https://api.twitter.com/1.1/statuses/home_timeline.json', 'YOUR_ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN_SECRET' )
+
+f = open("twittertimeline.txt","w")
+f.write(home_timeline)
+f.close()
+
+~~~~
+
+Before to run it, replace the following fields in the code:
+
+* `CONSUMER_KEY`
+* `CONSUMER_SECRET`
+* `YOUR_ACCESS_TOKEN` 
+* `YOU_ACCESS_TOKEN_SECRET`
+
+By your own values, respectively:
+
+* Consumer key
+* Consumer secret 
+* Access token
+* Access token secret
+
 [1]: https://github.com/joestump/python-oauth2/wiki/Twitter-Three-legged-OAuth  "Twitter Three legged OAuth"
