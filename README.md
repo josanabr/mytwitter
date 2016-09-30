@@ -13,7 +13,7 @@ As follows is described the software required to run Python apps against Twitter
 4. When you successfully created your twitter app, look for the following itmes in the "Kyes and Access Tokens" tab
 	* Consumer Key (API Key)
 	* Consumer Secret (API Secret)
-5. Copy and paste the following code. This is originally found at [link][1]. In this github repository can be download from [here]() 
+5. Copy and paste the following code. This is originally found at [link][1]. In this github repository that code can be download from [here](https://github.com/josanabr/mytwitter/blob/master/helper.py) 
 
 ~~~~
 import urlparse
