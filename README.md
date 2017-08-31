@@ -8,12 +8,13 @@ As follows is described the software required to run Python apps against Twitter
 	* To create local virtualenv, `virtualenv <dir>` e.g. `virtualenv venv`
 	* Activate the new environment, `source <dir>/bin/activate` e.g. 
           `source venv/bin/activate`
-2. Open your twitter account. Visit the following link [twitter apps](https://apps.twitter.com/)
-3. Then create a new app 
-4. When you successfully created your twitter app, look for the following itmes in the "Kyes and Access Tokens" tab
+2. Install the `oauth2` library as follows `2. Install the `oauth2` library as follows `pip install oauth2`.
+3. Open your twitter account. Visit the following link [twitter apps](https://apps.twitter.com/)
+4. Then create a new app 
+5. When you successfully created your twitter app, look for the following itmes in the "Kyes and Access Tokens" tab
 	* Consumer Key (API Key)
 	* Consumer Secret (API Secret)
-5. Copy and paste the following code. This is originally found at [link][1]. In this github repository that code can be download from [here](https://github.com/josanabr/mytwitter/blob/master/helper.py) 
+6. Copy and paste the following code. This is originally found at [link][1]. In this github repository that code can be download from [here](https://github.com/josanabr/mytwitter/blob/master/helper.py) 
 
 ~~~~
 import urlparse
@@ -81,15 +82,15 @@ print "You may now access protected resources using the access tokens above."
 print
 ~~~~
 
-6. Modify variables `consumer_key = 'my_key_from_twitter'` and `consumer_secret = 'my_secret_from_twitter'` with your own values
+7. Modify variables `consumer_key = 'my_key_from_twitter'` and `consumer_secret = 'my_secret_from_twitter'` with your own values
 
-7. Run the program and follow the given steps.
+8. Run the program and follow the given steps.
 
-8. Save `oauth_token` and `oauth_token_secret` values.
+9. Save `oauth_token` and `oauth_token_secret` values.
 
-9. Visit the web page of your recently created twitter app, click on "Keys and Access Tokens" tab and click on button "Test OAuth".
+10. Visit the web page of your recently created twitter app, click on "Keys and Access Tokens" tab and click on button "Test OAuth".
 
-10. Jot down the the following fields
+11. Jot down the the following fields
 	* Consumer key
 	* Consumer secret
 	* Access token
@@ -134,7 +135,7 @@ By your own values, respectively:
 * Access token
 * Access token secret
 
-## Presenting human-readable results
+## Presenting human-readable results
 
 The following code allows you to read the results of your previous program in a more readable way, [jsonhelper.py](https://github.com/josanabr/mytwitter/blob/master/jsonhelper.py).
 
